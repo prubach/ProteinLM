@@ -36,7 +36,7 @@ echo "Transfer megatron params to untrained tape"
 cd ./models
 mkdir -p out
 
-source $HOME/scripts/shells/activate_torch1.7.sh
+#source $HOME/scripts/shells/activate_torch1.7.sh
 python $HOME/converter/megatron-converter.py  -src $MEGA_CKPT/model_optim_rng.pt  -dst $HOME/models/untrained_tape/0/pytorch_model.bin  -out $HOME/models/out/pytorch_model.bin -dtp torch.float32 -hidden 1024 -heads 16 -layers 16
 cp untrained_tape/0/config.json out/config.json
-source $HOME/scripts/shells/activate_base.sh
+#source $HOME/scripts/shells/activate_base.sh
