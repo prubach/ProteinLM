@@ -2,8 +2,8 @@
 
 RANK=0
 WORLD_SIZE=1
-DATA_PATH=<Specify path and file prefix>_text_document
-CHECKPOINT_PATH=<Specify path>
+DATA_PATH=../tape/data/pfam/tape_pfam_all_text_document
+CHECKPOINT_PATH=../tape/data/pretrain_checkpoints
 
 mkdir -p $CHECKPOINT_PATH
 
@@ -23,7 +23,7 @@ python pretrain_tape.py \
        --save $CHECKPOINT_PATH \
        --load $CHECKPOINT_PATH \
        --data-path $DATA_PATH \
-       --vocab-file <Specify path to iupac_vocab.txt> \
+       --vocab-file protein_tools/iupac_vocab.txt \
        --tokenizer-type BertWordPieceCase \
        --data-impl mmap \
        --split 32593668,1715454,44311 \

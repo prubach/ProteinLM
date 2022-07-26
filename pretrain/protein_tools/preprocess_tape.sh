@@ -1,7 +1,7 @@
 set -xe
 
-PFAM=<Specify path form PFAM>
-VOCAB=<Specify path form VOCAB>
+PFAM=../../tape/data/pfam
+VOCAB=../protein_tools
 
 python ../tools/preprocess_data.py --input $PFAM/pfam_all.json \
 	--tokenizer-type BertWordPieceCase --vocab-file $VOCAB/iupac_vocab.txt \

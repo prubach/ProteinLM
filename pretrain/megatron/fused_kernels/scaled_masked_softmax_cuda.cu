@@ -12,6 +12,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ * #include "THC/THC.h"
  */
 
 #include <ATen/ATen.h>
@@ -19,7 +20,6 @@
 #include <cuda_runtime.h>
 #include <cuda_fp16.h>
 #include <cuda_profiler_api.h>
-#include "THC/THC.h"
 #include <ATen/cuda/CUDAContext.h>
 #include <torch/extension.h>
 #include "scaled_masked_softmax.h"
